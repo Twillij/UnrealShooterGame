@@ -14,7 +14,9 @@ public class UnrealShooterGame : ModuleRules
 			"CoreUObject",
 			"Engine",
 			"EnhancedInput",
-			"InputCore"
+			"InputCore",
+			"OnlineSubsystem",
+			"OnlineSubsystemSteam"
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
