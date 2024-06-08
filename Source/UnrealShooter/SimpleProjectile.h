@@ -13,14 +13,14 @@ class UNREALSHOOTER_API ASimpleProjectile : public AActor
 
 public:
 	ASimpleProjectile();
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components")
+	UShapeComponent* HitCollisionComponent;
 	
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
-	UShapeComponent* CollisionShapeComponent;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components")
+	UStaticMeshComponent* ProjectileMesh;
 	
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
-	UStaticMeshComponent* StaticMesh;
-	
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components")
 	UProjectileMovementComponent* ProjectileMovementComponent;
 	
 	UPROPERTY(EditAnywhere, Category = "Effects")
@@ -28,10 +28,10 @@ public:
 	
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Stats")
-	TSubclassOf<UDamageType> DamageType;
+	TSubclassOf<UDamageType> DamageType = UDamageType::StaticClass();
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Stats")
-	float Damage;
+	float Damage = 10;
 
 protected:
 	virtual void BeginPlay() override;

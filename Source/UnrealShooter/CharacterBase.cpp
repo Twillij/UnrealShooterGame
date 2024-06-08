@@ -106,6 +106,6 @@ void ACharacterBase::HandleFire_Implementation()
 	FActorSpawnParameters SpawnParameters;
 	SpawnParameters.Instigator = GetInstigator();
 	SpawnParameters.Owner = this;
-
-	GetWorld()->SpawnActor<ASimpleProjectile>(SpawnLocation, SpawnRotation, SpawnParameters);
+	
+	GetWorld()->SpawnActor(ProjectileClass, &SpawnLocation, &SpawnRotation, SpawnParameters);
 }
