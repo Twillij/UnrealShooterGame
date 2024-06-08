@@ -5,7 +5,7 @@ public class UnrealShooterServerTarget : TargetRules
 {
 	public UnrealShooterServerTarget(TargetInfo Target) : base(Target)
 	{
-		Type = TargetType.Editor;
+		Type = TargetType.Server;
 		DefaultBuildSettings = BuildSettingsVersion.V5;
 		IncludeOrderVersion = EngineIncludeOrderVersion.Latest;
 
