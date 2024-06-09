@@ -1,12 +1,7 @@
 #include "MainMenuGameMode.h"
-#include "Widgets/MainMenuWidget.h"
+#include "MainMenuController.h"
 
-void AMainMenuGameMode::BeginPlay()
+AMainMenuGameMode::AMainMenuGameMode()
 {
-	Super::BeginPlay();
-	MainMenuWidget = NewObject<UMainMenuWidget>(this);
-	if (MainMenuWidget)
-	{
-		MainMenuWidget->AddToViewport();
-	}
+	PlayerControllerClass = AMainMenuController::StaticClass();
 }
