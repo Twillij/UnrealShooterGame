@@ -5,7 +5,7 @@
 #include "MainMenuGameMode.generated.h"
 
 UCLASS()
-class UNREALSHOOTER_API AMainMenuGameMode : public AGameMode
+class UNREALSHOOTER_API AMainMenuGameMode : public AGameModeBase
 {
 	GENERATED_BODY()
 
